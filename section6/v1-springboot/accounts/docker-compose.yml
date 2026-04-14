@@ -1,0 +1,38 @@
+services:
+  accounts:
+    image: "kannanfsd/accounts:s4"
+    container_name: accounts-ms
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - kannanfsd
+  loans:
+    image: "kannanfsd/loans:s4"
+    container_name: loans-ms
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - kannanfsd
+  cards:
+    image: "kannanfsd/cards:s4"
+    container_name: cards-ms
+    ports:
+      - "9000:9000"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - kannanfsd
+
+networks:
+  kannanfsd:
+    driver: "bridge"

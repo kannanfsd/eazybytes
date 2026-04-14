@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+loans:
+  message: "Welcome to EazyBank Loans related PROD APIs"
+  contactDetails:
+    name: "Raine Aishwarya - Production Support"
+    email: "aishwarya@example.com"
+  onCallSupport:
+    - (777) 123-4567
+    - (777) 987-6543
